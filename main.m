@@ -1,5 +1,5 @@
 %% PD Control of a Manipulator
-%% Set up rarameters
+%% Set up parameters
 [param,param4func] = set_params();
 
 %% Set initial conditions
@@ -16,3 +16,4 @@ options1 = odeset('RelTol', 1e-5, 'AbsTol', 1e-6, 'Events', event1);
 
 %% Animation
 animate(t,x,param);
+

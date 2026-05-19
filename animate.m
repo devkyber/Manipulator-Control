@@ -2,7 +2,7 @@ function [] = animate(t,x,param)
     len = max(size(t));
     rot = @(th)[cos(th) -sin(th); sin(th) cos(th)];
     
-    for i = 1:len
+    for i = 1:10:len
         p1 = rot(x(i,1))*[param.L1;0];
         p2 = p1 + rot(x(i,1) + x(i,2)) * [param.L2;0];
         p3 = p2 + rot(x(i,1) + x(i,2) + x(i,3))*[param.L3;0];

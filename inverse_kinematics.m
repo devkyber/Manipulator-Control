@@ -1,4 +1,4 @@
-function q_sol = ik_analytic(p_d, q4abs, q4, branch, param)
+function q_sol = inverse_kinematics(p_d, q4abs, q4, branch, param)
 % Analytic IK for 4-link planar arm with q4 chosen as a free variable.
 %
 % Inputs:

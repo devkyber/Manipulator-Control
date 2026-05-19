@@ -106,3 +106,15 @@ write_fcn_m(fullfile(m_output_dir,'fcn_G.m'), {'q','params'}, ...
 
 write_fcn_m(fullfile(m_output_dir,'fcn_B.m'), {'q','params'}, ...
     [m_list_q_stance; m_list_params], {B,'B'});
+
+
+%% Task Space
+x_task = p4;
+J = jacobian(x_task, q);
+
+write_fcn_m(fullfile(m_output_dir,'fcn_x.m'), {'q','params'}, ...
+    [m_list_q_stance; m_list_params], {x_task,'x_task'});
+
+write_fcn_m(fullfile(m_output_dir,'fcn_J.m'), {'q','params'}, ...
+    [m_list_q_stance; m_list_params], {J,'J'});
+
